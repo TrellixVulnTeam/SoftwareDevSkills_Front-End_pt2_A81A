@@ -9,6 +9,7 @@
   "author": "Milla Kotilainen",
   "license": "MIT",
   "dependencies": {
+    "node-sass": "^7.0.1",
     "uuid": "^8.3.2"
   }
 }

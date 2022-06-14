@@ -9,3 +9,10 @@ https://millakotilainen.github.io/SoftwareDevSkills_Front-End_pt2
 To run the coursework navigate to folder called 'Coursework'.
 You can also try to see the coursework in GitHub Pages:
 https://millakotilainen.github.io/SoftwareDevSkills_Front-End/
+
+
+Video on the project running:
+https://youtu.be/u1dRZvCGvXY
+
+Video on the coursework running:
+https://youtu.be/Wy9agr5awy4

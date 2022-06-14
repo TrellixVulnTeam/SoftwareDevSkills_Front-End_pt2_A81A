@@ -16,3 +16,5 @@ https://youtu.be/u1dRZvCGvXY
 
 Video on the coursework running:
 https://youtu.be/Wy9agr5awy4
+
+The learning diary can be found as a separate file in this repository.

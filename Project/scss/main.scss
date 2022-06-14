@@ -1,0 +1,224 @@
+@import 'config';
+@import 'menu';
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include background;
+    background: $primary-color;
+    color: #444;
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+//Headings
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 4rem;
+    }
+
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+        font-size: 2rem;
+    }
+}
+
+a{
+    color: #444;
+    text-decoration: none;
+}
+
+header{
+    // Header always stays at the top
+    position: fixed;
+    // Header is always at front
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+main{
+    padding: 4rem;
+    // So that the footer stays in the bottom
+    min-height: calc(100vh - 60px);
+
+    .icons{
+        margin-top: 1rem;
+
+        a{
+            padding: 0.3rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeInOut();
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+        h1{
+            margin-top: 20vh;
+        }
+    }
+}
+
+.about-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage bio box'
+    'job1 job2 job3';
+    grid-template-columns:repeat(3, 1fr);
+
+    .bio-image{
+        grid-area: bioimage;
+        width: 100%;
+        border-radius: 6px;
+        border: #fff 3px solid;
+    }
+
+    .bio{
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .box {
+        grid-area: box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        div{
+            font-size: 2rem;
+            //border: 3px #fff solid;
+            background: lighten($primary-color, 5);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 6px;
+            @include easeInOut;
+    
+            &:hover {
+                padding: 0.5rem 1.5rem;
+                background: $secondary-color;
+                color: set-text-color($secondary-color);
+                span{
+                    color: set-text-color($secondary-color);
+                }
+            }
+        }
+        
+    }
+
+    .job-1{
+        grid-area: job1;
+    }
+    
+    .job-2{
+        grid-area: job2;
+    }
+    
+    .job-3{
+        grid-area: job3;
+    }
+    
+    .job{
+        font-size: 1.5rem;
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        border-radius: 6px;
+    }
+}
+
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity:0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.pimg1{
+    //Check this
+    background-image: url('/Project/dist/img/computer.jpeg');
+    min-height: 400px;
+}
+
+.pimg2{
+    //Check this
+    background-image: url('/Project/dist/img/code.png');
+    min-height: 400px;
+    max-height: 400px;
+}
+
+.pimg3{
+    //Check this
+    background-image: url('/Project/dist/img/background.jpg');
+    min-height: 400px;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: $primary-color;
+}
+
+.section-dark{
+    background-color: rgba(darken($primary-color, 20), 0.7);
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+}
+
+
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import 'mobile';

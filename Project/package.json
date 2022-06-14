@@ -1,0 +1,14 @@
+{
+  "name": "softwaredevskills_front-end",
+  "version": "1.0.0",
+  "description": "Course Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Milla Kotilainen",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

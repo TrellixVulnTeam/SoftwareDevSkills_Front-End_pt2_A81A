@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Course Project",
   "main": "index.js",
+  "homepage": "https://millakotilainen.github.io/SoftwareDevSkills_Front-End_pt2",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Milla Kotilainen",
   "license": "MIT",
